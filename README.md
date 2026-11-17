@@ -1,6 +1,6 @@
 # RESTful Booker API Test Automation
 
-![RESTFUL BOOKER Test Automation CI](https://github.com/tmpman90-tech/Restful-booker-api-automation/actions/workflows/ci.yml/badge.svg)
+[![RESTFUL BOOKER Test Automation CI](https://github.com/tmpman90-tech/Restful-booker-api-automation/actions/workflows/ci.yml/badge.svg)](https://github.com/tmpman90-tech/Restful-booker-api-automation/actions/workflows/ci.yml)
 
 API test automation and exploratory testing suite built with **Python**, **Pytest**, **Requests**, and **Postman** against the [RESTful Booker API](https://restful-booker.herokuapp.com/apidoc/index.html).
 
@@ -27,7 +27,7 @@ Restful-booker-api-automation/
 ├── postman/
 │   ├── Restful Booker.postman_collection.json      # Exported Postman v2.1 collection
 │   └── Restful Booker.postman_environment.json     # Exported Postman environment variables
-├── reports/                                        # Self-contained HTML reports (git-ignored)
+├── reports/                                        # Generated HTML reports (git-ignored)
 ├── tests/
 │   ├── conftest.py                                 # Pytest fixtures (client, auth_token, created_booking)
 │   ├── test_ping.py                                # Health check & response time test (TC1)
@@ -42,56 +42,80 @@ Restful-booker-api-automation/
 
 ## Documentation
 
-- [Test Plan & Scenario Matrix](docs/TEST_PLAN.md) — Mapping of all 22 automated test cases (32 executions) and 5 excluded scenarios (`TC1`–`TC27`).
-- [QA Handover & Bug Report](docs/QA_handover_bug_report.md) — Reproduction steps and REST contract findings (`BUG-01` through `BUG-06`).
+- [Test Plan & Scenario Matrix](https://github.com/tmpman90-tech/Restful-booker-api-automation/blob/main/docs/TEST_PLAN.md) — Mapping of all 22 automated test cases (32 executions) and 5 excluded scenarios (`TC1`–`TC27`).
+- [QA Handover & Bug Report](https://github.com/tmpman90-tech/Restful-booker-api-automation/blob/main/docs/QA_handover_bug_report.md) — Reproduction steps and REST contract findings (`BUG-01` through `BUG-06`).
 
 ## Setup & Execution
 
-**Prerequisites:** Python 3.12+ and Git.
+**Prerequisites:** Python 3.12+, Git, and an active internet connection to access the public RESTful Booker API.
 
-1. Clone the repository and create a virtual environment:
+### 1. Clone the repository and create a virtual environment
 
-   ```bash
-   git clone https://github.com/tmpman90-tech/Restful-booker-api-automation.git
-   cd Restful-booker-api-automation
-   python -m venv .venv
-   ```
+```powershell
+git clone https://github.com/tmpman90-tech/Restful-booker-api-automation.git
+cd Restful-booker-api-automation
+python -m venv .venv
+```
 
-2. Activate the virtual environment:
+### 2. Activate the virtual environment
 
-   **Windows (PowerShell):**
-   ```powershell
-   .\.venv\Scripts\Activate.ps1
-   ```
+**Windows (PowerShell):**
 
-   **macOS / Linux:**
-   ```bash
-   source .venv/bin/activate
-   ```
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
 
-3. Install dependencies:
+**macOS / Linux:**
 
-   ```bash
-   python -m pip install --upgrade pip
-   pip install -r requirements.txt
-   ```
+```bash
+source .venv/bin/activate
+```
 
-4. Configure environment variables (optional): Default sandbox settings work out of the box. To override them locally, copy `.env.example` to `.env`:
+### 3. Install dependencies
 
-   **Windows (PowerShell):**
-   ```powershell
-   Copy-Item .env.example .env
-   ```
+```bash
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
 
-   **macOS / Linux:**
-   ```bash
-   cp .env.example .env
-   ```
+### 4. Configure environment variables (optional)
 
-5. Run the tests:
+Default sandbox settings work out of the box. To override them locally, copy `.env.example` to `.env`:
 
-   - Full suite (32 executions + self-contained HTML report): `pytest`
-   - Smoke suite only (7 critical checks): `pytest -m smoke`
-   - Regression suite only (25 executions): `pytest -m regression`
+**Windows (PowerShell):**
 
-After running `pytest`, open `reports/report.html` in a browser to inspect test durations and results.
+```powershell
+Copy-Item .env.example .env
+```
+
+**macOS / Linux:**
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` to override the default configuration if needed.
+
+### 5. Run the tests
+
+**Full test suite (32 executions + self-contained HTML report):**
+
+```bash
+python -m pytest
+```
+
+**Smoke suite only (7 critical checks):**
+
+```bash
+python -m pytest -m smoke
+```
+
+**Regression suite only (25 executions):**
+
+```bash
+python -m pytest -m regression
+```
+
+After execution, open `reports/report.html` in a browser to inspect test results and execution durations.
+
+**Note:** Each test run generates or overwrites `reports/report.html`. The report always reflects the most recent test execution.
