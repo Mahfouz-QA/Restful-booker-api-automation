@@ -1,6 +1,6 @@
 # RESTful Booker API Test Automation
 
-[![RESTFUL BOOKER Test Automation CI](https://github.com/tmpman90-tech/Restful-booker-api-automation/actions/workflows/ci.yml/badge.svg)](https://github.com/tmpman90-tech/Restful-booker-api-automation/actions/workflows/ci.yml)
+[![RESTFUL BOOKER Test Automation CI]https://github.com/Mahfouz-QA/Restful-booker-api-automation/actions/workflows/ci.yml/badge.svg](https://github.com/Mahfouz-QA/Restful-booker-api-automation/actions/workflows/ci.yml/badge.svg)
 
 API test automation and exploratory testing suite built with **Python**, **Pytest**, **Requests**, and **Postman** against the [RESTful Booker API](https://restful-booker.herokuapp.com/apidoc/index.html).
 
@@ -42,8 +42,8 @@ Restful-booker-api-automation/
 
 ## Documentation
 
-- [Test Plan & Scenario Matrix](https://github.com/tmpman90-tech/Restful-booker-api-automation/blob/main/docs/TEST_PLAN.md) — Mapping of all 22 automated test cases (32 executions) and 5 excluded scenarios (`TC1`–`TC27`).
-- [QA Handover & Bug Report](https://github.com/tmpman90-tech/Restful-booker-api-automation/blob/main/docs/QA_handover_bug_report.md) — Reproduction steps and REST contract findings (`BUG-01` through `BUG-06`).
+- [Test Plan & Scenario Matrix](https://github.com/Mahfouz-QA/Restful-booker-api-automation/blob/main/docs/TEST_PLAN.md) — Mapping of all 22 automated test cases (32 executions) and 5 excluded scenarios (`TC1`–`TC27`).
+- [QA Handover & Bug Report](https://github.com/Mahfouz-QA/Restful-booker-api-automation/blob/main/docs/QA_handover_bug_report.md) — Reproduction steps and REST contract findings (`BUG-01` through `BUG-06`).
 
 ## Setup & Execution
 
@@ -52,7 +52,7 @@ Restful-booker-api-automation/
 ### 1. Clone the repository and create a virtual environment
 
 ```powershell
-git clone https://github.com/tmpman90-tech/Restful-booker-api-automation.git
+git clone https://github.com/Mahfouz-QA/Restful-booker-api-automation.git
 cd Restful-booker-api-automation
 python -m venv .venv
 ```
