@@ -1,6 +1,6 @@
 # RESTful Booker API Test Automation
 
-[![RESTFUL BOOKER Test Automation CI]https://github.com/Mahfouz-QA/Restful-booker-api-automation/actions/workflows/ci.yml/badge.svg](https://github.com/Mahfouz-QA/Restful-booker-api-automation/actions/workflows/ci.yml/badge.svg)
+[![RESTFUL BOOKER Test Automation CI](https://github.com/Mahfouz-QA/Restful-booker-api-automation/actions/workflows/ci.yml/badge.svg)](https://github.com/Mahfouz-QA/Restful-booker-api-automation/actions/workflows/ci.yml)
 
 API test automation and exploratory testing suite built with **Python**, **Pytest**, **Requests**, and **Postman** against the [RESTful Booker API](https://restful-booker.herokuapp.com/apidoc/index.html).
 
@@ -51,9 +51,21 @@ Restful-booker-api-automation/
 
 ### 1. Clone the repository and create a virtual environment
 
-```powershell
-git clone https://github.com/Mahfouz-QA/Restful-booker-api-automation.git
+Clone the repository:
+
+```bash
+git clone [https://github.com/Mahfouz-QA/Restful-booker-api-automation.git](https://github.com/Mahfouz-QA/Restful-booker-api-automation.git)
+```
+
+Move into the project directory:
+
+```bash
 cd Restful-booker-api-automation
+```
+
+Create a virtual environment:
+
+```bash
 python -m venv .venv
 ```
 
@@ -73,8 +85,15 @@ source .venv/bin/activate
 
 ### 3. Install dependencies
 
+Upgrade `pip`:
+
 ```bash
 python -m pip install --upgrade pip
+```
+
+Install the pinned dependencies:
+
+```bash
 python -m pip install -r requirements.txt
 ```
 
